@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Web to EXE turns basic HTML, CSS, and JavaScript project ZIPs into Windows EXE applications using Electron and Node.js." />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Web to EXE — ZIP to Windows EXE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="shell nav-shell">
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#what-is-it">What is it</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#supported-projects">Support</a>
+        <a href="#smartscreen">SmartScreen</a>
+        <a href="#download">Download</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-orb orb-one" aria-hidden="true"></div>
+      <div class="hero-orb orb-two" aria-hidden="true"></div>
+      <div class="shell hero-layout">
+        <div class="hero-copy reveal">
+          <div class="hero-kicker-row">
+            <span class="version-pill">v0.1.8</span>
+            <span class="hero-kicker">Windows web project packaging</span>
+          </div>
+
+          <h1>
+            Stop worrying about converting web projects to EXE.
+            <span>Web to EXE does it for you.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Upload a ZIP containing HTML, CSS, and JavaScript files, and Web to EXE converts it into a Windows EXE application using Electron and Node.js.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#download">Download for Windows</a>
+            <a class="button button-ghost" href="#how-it-works">See how it works <span>↘</span></a>
+          </div>
+
+          <div class="hero-facts" aria-label="Key features">
+            <div><strong>Local-first</strong><span>Your project stays on your PC</span></div>
+            <div><strong>Vanilla V1</strong><span>HTML · CSS · JavaScript</span></div>
+            <div><strong>One flow</strong><span>ZIP in · EXE out</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Web to EXE build flow illustration">
+          <div class="visual-shell">
+            <div class="visual-topbar">
+              <div class="window-dots"><span></span><span></span><span></span></div>
+              <span class="visual-title">web-to-exe / build</span>
+              <span class="visual-status">ready</span>
+            </div>
+
+            <div class="drop-zone">
+              <div class="zip-icon">ZIP</div>
+              <div>
+                <strong>project.zip</strong>
+                <span>HTML / CSS / JavaScript</span>
+              </div>
+              <span class="file-check">✓</span>
+            </div>
+
+            <div class="flow-rail">
+              <div class="rail-line"></div>
+              <div class="rail-step active">
+                <span class="rail-index">01</span>
+                <div><strong>Inspect</strong><small>Checking project structure</small></div>
+                <span class="rail-state">done</span>
+              </div>
+              <div class="rail-step active">
+                <span class="rail-index">02</span>
+                <div><strong>Wrap</strong><small>Preparing Electron shell</small></div>
+                <span class="rail-state">done</span>
+              </div>
+              <div class="rail-step current">
+                <span class="rail-index">03</span>
+                <div><strong>Package</strong><small>Building Windows executable</small></div>
+                <span class="rail-state">working</span>
+              </div>
+            </div>
+
+            <div class="visual-result">
+              <div class="exe-badge">EXE</div>
+              <div><strong>Your Windows app</strong><span>Portable output</span></div>
+              <span class="result-arrow">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-strip" aria-label="Technology strip">
+      <div class="shell strip-inner">
+        <span>Built around</span>
+        <strong>HTML</strong>
+        <i>+</i>
+        <strong>CSS</strong>
+        <i>+</i>
+        <strong>JavaScript</strong>
+        <i>→</i>
+        <strong>Electron</strong>
+        <i>+</i>
+        <strong>Node.js</strong>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="what-is-it">
+      <div class="shell editorial-grid">
+        <div class="section-marker reveal">01 / What is it</div>
+        <div class="editorial-copy reveal">
+          <h2>A boring setup problem, turned into one straightforward action.</h2>
+          <p class="lead-copy">
+            Web to EXE is a desktop utility for people who want a faster path from a basic web project to a Windows executable. Instead of manually assembling an Electron packaging setup every time, the application handles the repetitive work for you.
+          </p>
+          <div class="human-note">
+            <span>Why it exists</span>
+            <p>Because installing tools, configuring a wrapper, and running packaging commands is useful knowledge — but it should not be mandatory every time you just want to ship a simple project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ink" id="how-it-works">
+      <div class="shell">
+        <div class="section-heading dark-heading reveal">
+          <div>
+            <span class="section-marker marker-on-dark">02 / How it works</span>
+            <h2>Four steps. No cloud upload.</h2>
+          </div>
+          <p>Web to EXE runs on your local machine. Your ZIP is inspected, wrapped, packaged, and returned as a Windows executable from the same PC.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-row reveal">
+            <span class="timeline-number">01</span>
+            <div class="timeline-title"><h3>Drop in your ZIP</h3><span>Input</span></div>
+            <p>Select the project archive you want to convert.</p>
+          </article>
+          <article class="timeline-row reveal">
+            <span class="timeline-number">02</span>
+            <div class="timeline-title"><h3>Inspect the project</h3><span>Check</span></div>
+            <p>The app looks for the expected entry point and validates the project structure.</p>
+          </article>
+          <article class="timeline-row reveal">
+            <span class="timeline-number">03</span>
+            <div class="timeline-title"><h3>Build the desktop wrapper</h3><span>Package</span></div>
+            <p>Electron and Node.js are used to prepare and package the Windows application.</p>
+          </article>
+          <article class="timeline-row reveal">
+            <span class="timeline-number">04</span>
+            <div class="timeline-title"><h3>Take the EXE</h3><span>Output</span></div>
+            <p>When packaging finishes, the generated Windows executable is ready to download.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sky" id="supported-projects">
+      <div class="shell support-layout">
+        <div class="support-copy reveal">
+          <span class="section-marker">03 / Supported projects</span>
+          <h2>V1 is intentionally small.</h2>
+          <p>Right now, Web to EXE focuses on basic vanilla projects. That keeps the conversion path predictable while the app is still early.</p>
+          <p class="future-copy">Broader project support is planned for later versions rather than pretending V1 can package everything.</p>
+        </div>
+
+        <div class="stack-board reveal">
+          <div class="stack-card html-card"><span class="stack-code">&lt;/&gt;</span><strong>HTML</strong><small>Supported now</small></div>
+          <div class="stack-card css-card"><span class="stack-code">#</span><strong>CSS</strong><small>Supported now</small></div>
+          <div class="stack-card js-card"><span class="stack-code">JS</span><strong>JavaScript</strong><small>Vanilla projects</small></div>
+          <div class="stack-card future-card"><span class="stack-code">+</span><strong>More later</strong><small>V2 / V3 direction</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-warning" id="smartscreen">
+      <div class="shell">
+        <div class="warning-header reveal">
+          <span class="warning-chip">Before you open the app</span>
+          <h2>Windows may show a SmartScreen warning.</h2>
+          <p>
+            New or unsigned Windows apps can be shown as “unrecognized” by SmartScreen. That warning is about publisher reputation/signing and does not, by itself, mean Windows detected malware.
+          </p>
+        </div>
+
+        <div class="warning-steps">
+          <figure class="warning-shot reveal">
+            <div class="shot-label"><span>Step 1</span><strong>Click “More info”</strong></div>
+            <img src="assets/smartscreen-step1.png" alt="Windows SmartScreen warning with an arrow pointing to More info" loading="lazy" />
+          </figure>
+
+          <div class="warning-arrow" aria-hidden="true">→</div>
+
+          <figure class="warning-shot reveal">
+            <div class="shot-label"><span>Step 2</span><strong>Click “Run anyway”</strong></div>
+            <img src="assets/smartscreen-step2.png" alt="Windows SmartScreen warning with an arrow pointing to Run anyway" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-section" id="download">
+      <div class="download-orb download-orb-one" aria-hidden="true"></div>
+      <div class="download-orb download-orb-two" aria-hidden="true"></div>
+      <div class="shell download-layout">
+        <div class="download-copy reveal">
+          <span class="download-eyebrow">Web to EXE v0.1.8</span>
+          <h2>Ready when you are.</h2>
+          <p>Download the portable Windows build. No account, no installer wizard, no sign-up.</p>
+          <div class="download-meta">
+            <span>Portable EXE</span>
+            <span>Windows</span>
+            <span>Local-first</span>
+          </div>
+        </div>
+
+        <a class="windows-download" href="assets/Web-to-EXE-0.1.8-Portable.exe" download>
+          <span class="windows-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span><small>Download for</small><strong>Windows</strong></span>
+          <b>↓</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="about">
+      <div class="shell about-layout">
+        <span class="section-marker reveal">04 / About</span>
+        <div class="about-copy reveal">
+          <h2>Made to remove friction, not hide what is happening.</h2>
+          <p>Web to EXE was created to make the basic web-project-to-Windows-app workflow less annoying. It handles the repetitive packaging work while keeping the product focused on a simple, understandable flow.</p>
+          <p>V1 is deliberately limited. The goal is to make the supported path work well first, then expand compatibility in future versions.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>Web to EXE</span>
+      <p>Built by <a href="https://github.com/mohammedzaid00100" target="_blank" rel="noopener noreferrer">Mohammed Zaid ↗</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
